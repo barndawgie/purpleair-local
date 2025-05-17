@@ -1,8 +1,12 @@
-# The contents of this file is based on https://github.com/home-assistant/core/blob/dev/pyproject.toml
+[tool.codespell]
+# Check filename spelling in addition to file contents
+check-filenames = ''
+ignore-words-list = 'hass'
 
+[tool.ruff]
 target-version = "py313"
 
-[lint]
+[tool.ruff.lint]
 select = [
     "ALL",
 ]
@@ -16,11 +20,11 @@ ignore = [
     "ISC001", # incompatible with formatter
 ]
 
-[lint.flake8-pytest-style]
+[tool.ruff.lint.flake8-pytest-style]
 fixture-parentheses = false
 
-[lint.pyupgrade]
+[tool.ruff.lint.pyupgrade]
 keep-runtime-typing = true
 
-[lint.mccabe]
+[tool.ruff.lint.mccabe]
 max-complexity = 25
