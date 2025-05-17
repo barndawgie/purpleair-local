@@ -20,3 +20,9 @@ repos:
       - id: codespell
         additional_dependencies:
           - tomli
+
+# Configuration per https://pre-commit.ci/#configuration
+ci:
+  autoupdate_schedule: monthly
+  skip: [no-commit-to-branch]
+  autoupdate_commit_msg: 'ci(pre-commit.ci): pre-commit autoupdate'
